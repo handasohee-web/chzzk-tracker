@@ -3,17 +3,17 @@ name: Chzzk Category Tracker
 on:
   schedule:
     - cron: '*/5 * * * *' # 5분마다 실행
-  workflow_dispatch:      # 수동으로도 실행 가능하게 함
+  workflow_dispatch:      # 수동 실행 버튼 활성화
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: 코드 체크아웃
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4 # v3에서 v4로 업데이트
 
       - name: 파이썬 설치
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5 # v4에서 v5로 업데이트
         with:
           python-version: '3.9'
 
